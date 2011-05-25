@@ -1,0 +1,56 @@
+body {
+	font-size: 15px;
+	background-image: url(../images/bg.png);
+	font-family: "Museo Sans", Helvetica, sans-serif;
+	text-shadow: 1px 1px #fff;
+}
+
+#header {
+	border-bottom: 1px solid #E3E5E8;
+	color: #45525F;
+}
+
+#header #title {
+	font-size: 2.5em;
+	font-weight: bold;	
+}
+#header #subtitle {
+	font-weight: normal;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.frame {
+	padding: 1em 0;
+}
+
+.big-text-box {
+
+}
+
+.big-text-box .number {
+	font-size: 2.5em;
+}
+.big-text-box .desc {
+	font-size: 1em;
+}
+
+.build-success {
+	color: #52A622;
+}
+.build-failed {
+	color: #B90016;
+}
+.build-running {
+	color: #D6C200;
+}
+
+img {
+	width: 950px;
+	-moz-box-shadow: 1px 1px 3px #888;
+	-webkit-box-shadow: 1px 1px 3px #888;
+}
+
+#footer, #footer a {
+	color: #AEAFB3;
+}

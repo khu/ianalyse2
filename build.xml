@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="cruise" basedir="." default="pkg">
+    <property name="scala.home" value="/Users/twer/sdk/scala-2.8.1.final"/>
+    <property name="scala-compiler.jar" value="${scala.home}/lib/scala-compiler.jar"/>
+    <property name="scala-library.jar" value="${scala.home}/lib/scala-library.jar"/>
+    <property name="test.dir" value="app/test"></property>
+    <property name="src.dir" value="app/src"></property>
+    <property name="server.src.dir" value="server/src"></property>
+    <property name="target.dir" value="target"></property>
+    <property name="dist.dir" value="dist"></property>
+
+    <property name="compiled.server.dir" value="${target.dir}/server/classes"></property>
+    <property name="compiled.src.dir" value="${target.dir}/production/classes"></property>
+    <property name="compiled.test.dir" value="${target.dir}/test/classes"></property>
+
+
+    <taskdef resource="scala/tools/ant/antlib.xml">
+        <classpath refid="scala.classpath"/>
+    </taskdef>
+
+    <!--define all the path-->
+    <path id="scala.classpath">
+        <pathelement location="${scala-compiler.jar}"/>
+        <pathelement location="${scala-library.jar}"/>
+    </path>
+
+    <path id="source.lib.classpath">
+        <fileset dir="app/webapp/WEB-INF/lib">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="compile.source.classpath">
+        <path refid="scala.classpath"></path>
+        <path refid="source.lib.classpath"></path>
+    </path>
+
+
+    <path id="server.source.classpath">
+        <fileset dir="server/lib">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="compile.test.classpath">
+        <fileset dir="app/lib">
+            <include name="**/*.jar"/>
+        </fileset>
+        <path refid="compile.source.classpath"></path>
+        <pathelement location="${dist.dir}/ianalyse.jar"/>
+    </path>
+
+    <path id="run.test.classpath">
+        <path refid="compile.test.classpath"></path>
+        <pathelement location="${compiled.test.dir}"/>
+    </path>
+
+
+    <target name="prepare">
+        <delete dir="${target.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <mkdir dir="${compiled.src.dir}"/>
+        <mkdir dir="${compiled.test.dir}"/>
+        <mkdir dir="${compiled.server.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${dist.dir}/expanded"/>
+    </target>
+
+    <target name="compile.src" depends="prepare">
+        <scalac srcdir="${src.dir}" destdir="${compiled.src.dir}"
+                classpathref="compile.source.classpath">
+            <include name="**/*.scala"/>
+            <exclude name="**/*.java"/>
+        </scalac>
+        <javac srcdir="${src.dir}" destdir="${compiled.src.dir}" classpathref="compile.source.classpath">
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <target name="compile.server" depends="prepare">
+        <javac srcdir="${server.src.dir}" destdir="${compiled.server.dir}"
+               classpathref="server.source.classpath">
+            <include name="**/*.java"/>
+        </javac>
+        <jar destfile="${dist.dir}/start.jar">
+            <fileset dir="${compiled.server.dir}"/>
+            <zipfileset includes="**/*" src="server/lib/commons-io-2.0.1.jar"/>
+            <zipfileset includes="**/*" src="server/lib/jetty-6.1.26.jar"/>
+            <zipfileset includes="**/*" src="server/lib/jetty-util-6.1.26.jar"/>
+            <zipfileset includes="**/*" src="server/lib/servlet-api-2.5-20081211.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="com.ianalyse.IanalyseServer"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="compile.test" depends="prepare,jar.source">
+        <scalac srcdir="${test.dir}" destdir="${compiled.test.dir}" classpathref="compile.test.classpath">
+            <include name="**/*.scala"/>
+            <exclude name="**/*.java"/>
+        </scalac>
+        <javac srcdir="${test.dir}" destdir="${compiled.test.dir}" classpathref="compile.test.classpath">
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+    <target name="run.test" depends="compile.test" description="execute the tests">
+        <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
+            <classpath refid="run.test.classpath"/>
+        </taskdef>
+        <scalatest runpath="${compiled.test.dir}"
+                   haltonfailure="true" fork="false">
+            <reporter type="stdout"/>
+        </scalatest>
+    </target>
+
+    <target name="jar.source" depends="compile.src">
+        <jar destfile="${dist.dir}/ianalyse.jar"
+             basedir="${compiled.src.dir}"
+                />
+    </target>
+
+
+    <target name="pkg" depends="compile.server, jar.source">
+        <copy file="${dist.dir}/start.jar" todir="${dist.dir}/expanded"/>
+        <copy file="${dist.dir}/ianalyse.jar" todir="app/webapp/WEB-INF/lib"/>
+        <copy todir="${dist.dir}/expanded/ianalyse2">
+            <fileset dir="app/webapp">
+                <include name="**/*"/>
+                <exclude name="**/classes/**/*"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="s" depends="pkg">
+        <java dir="dist/expanded" jar="dist/expanded/start.jar" fork='true'>
+            <sysproperty key="url" value="http://deadlock.netbeans.org/hudson/api/xml"></sysproperty>
+            <sysproperty key="env" value="production"></sysproperty>
+        </java>                           
+    </target>
+
+    <target name="rea">
+        <java dir="dist/expanded" jar="dist/expanded/start.jar" fork='true'>
+            <sysproperty key="url" value="http://10.113.192.70:9080/api/xml"></sysproperty>
+            <sysproperty key="env" value="production"></sysproperty>
+        </java>
+    </target>
+</project>
