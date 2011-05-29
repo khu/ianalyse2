@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb305af1-9d0e-4f27-abbf-9d17167d4d14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/webapp/javascripts/per-day.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" afterPath="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ianalyse2.iws" afterPath="$PROJECT_DIR$/ianalyse2.iws" />
     </list>
     <ignored path="ianalyse2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,19 +80,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IanalyseServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
+      <file leaf-file-name="PerDay.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+            <state line="28" column="1" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="per-day.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SeqLike.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/sdk/scala-2.8.1.final/src/scala-library-src.jar!/scala/collection/SeqLike.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="803" column="26" selection-start="30624" selection-end="30629" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Projects.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Projects.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="6" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommitResults.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/CommitResults.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="17" selection-start="1092" selection-end="1131" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IanalyseServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="29" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3442623">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="per-day.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-day.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.68277943">
+            <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +137,7 @@
       <file leaf-file-name="PerDayTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="18" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="445" selection-end="501" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,10 +165,10 @@
         <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/BuildsTest.scala" />
         <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" />
         <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerBuild.scala" />
-        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" />
-        <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
         <option value="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl" />
         <option value="$PROJECT_DIR$/app/webapp/javascripts/per-day.js" />
+        <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
+        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" />
       </list>
     </option>
   </component>
@@ -285,7 +317,7 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Application.IanalyseServer">
+  <component name="RunManager" selected="ScalaTest.PerDayTest">
     <configuration default="false" name="BuildTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="app" />
       <setting name="path" value="com.ianalyse2.domain.BuildTest" />
@@ -493,10 +525,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="22" width="1397" height="878" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41292876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -505,12 +538,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.119436204" sideWeight="0.9116095" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.119436204" sideWeight="0.38654354" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0883905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6134565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27836412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -552,18 +584,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/ProjectFixture.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="297" selection-end="299" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/BuildTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="61" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.8542601">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="12" selection-start="532" selection-end="532" vertical-scroll-proportion="-1.5768688">
@@ -578,23 +598,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.16460906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="29" selection-start="477" selection-end="485" vertical-scroll-proportion="0.51028806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/CommitResults.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="334" selection-end="455" vertical-scroll-proportion="0.40329218">
           <folding />
         </state>
       </provider>
@@ -627,16 +633,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
+    <entry file="file://$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+        <state line="90" column="11" selection-start="3880" selection-end="3880" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl">
+    <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-day.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="11" selection-start="3880" selection-end="3880" vertical-scroll-proportion="0.0">
+        <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -648,16 +654,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/CommitResults.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+        <state line="40" column="17" selection-start="1092" selection-end="1131" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-day.js">
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Projects.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.68277943">
+        <state line="8" column="6" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/sdk/scala-2.8.1.final/src/scala-library-src.jar!/scala/collection/SeqLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="803" column="26" selection-start="30624" selection-end="30629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="445" selection-end="501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="1" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="29" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3442623">
           <folding />
         </state>
       </provider>
