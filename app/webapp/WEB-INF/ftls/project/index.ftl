@@ -15,6 +15,7 @@
     <script type="text/javascript" src="/ianalyse2/javascripts/exporting.js"></script>
     <script type="text/javascript" src="/ianalyse2/javascripts/commitors.js"></script>
     <script type="text/javascript" src="/ianalyse2/javascripts/per-build.js"></script>
+    <script type="text/javascript" src="/ianalyse2/javascripts/per-day.js"></script>
 </head>
 <body>
 	<div class="container" id="header">
@@ -81,96 +82,15 @@
         <div id="per-day">
         </div>
         <script type="text/javascript">
-        var chart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'per-day'
-        },
-        title: {
-            text: ''
-        },
-        xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-                month: '%e. %b',
-                year: '%b'
-            }
-        },
-        yAxis: [{ // Primary yAxis
-            labels: {
-                formatter: function() {
-                    return this.value +'times';
-                },
-                style: {
-                    color: '#89A54E'
-                }
-            },
-            title: {
-                text: 'Builds',
-                style: {
-                    color: '#89A54E'
-                }
-            }
-        }, { // Secondary yAxis
-            title: {
-                text: 'Pass rate',
-                style: {
-                    color: '#4572A7'
-                }
-            },
-            labels: {
-                formatter: function() {
-                    return this.value +' %';
-                },
-                style: {
-                    color: '#4572A7'
-                }
-            },
-            opposite: true
-        }],
-        tooltip: {
-            formatter: function() {
-                var s = ''+
-                        this.x  +': '+ this.y;
-                return s;
-            }
-        },
-        labels: {
-            items: [{
-                html: '',
-                style: {
-                    left: '40px',
-                    top: '8px',
-                    color: 'black'
-                }
-            }]
-        },
-        plotOptions: {
-            column: {
-                stacking: 'normal',
-                borderWidth: 0
-            }
-        },
-        series: [
-        {
-            name: 'Failed',
-            color: '#B90016',
-            type: 'column',
-            data: [[Date.UTC(2010, 3,11), 3],[Date.UTC(2010, 3,13), 7],[Date.UTC(2010, 3,12), 9]]
-        },{
-            name: 'Passed',
-            color: '#52A622',
-            type: 'column',
-            data: [[Date.UTC(2010, 3,11), 12],[Date.UTC(2010, 3,13), 12],[Date.UTC(2010, 3,12), 13]]
-        }
-        ,{
-            name: 'Pass rate',
-            color: '#4572A7',
-            type: 'line',
-            yAxis: 1,
-            data: [[Date.UTC(2010, 3, 16), 12], [Date.UTC(2010, 3,19), 12], [Date.UTC(2010, 3,20), 19]]
-
-        }]
-    });
+        jQuery(document).ready(function() {
+        $.ajax({
+          url: "/ianalyse2/project/${project.name()}/perday.json",
+          success: function(data, textStatus, jqXHR){
+                var obj = jQuery.parseJSON(jqXHR.responseText);
+                per_day(obj)
+          }
+        });
+        })
         </script>
 	</div>
 

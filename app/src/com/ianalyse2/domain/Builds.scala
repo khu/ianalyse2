@@ -25,11 +25,11 @@ class Builds extends LogHelper {
   }
 
   def perDay = {
-    new PerDay
+    new PerDay(orderByDay)
     //new PerDay(orderByDay)
   }
 
-  def orderByDay = {
+  def orderByDay:HashMap[DateTime, Builds] = {
     var ordered = new HashMap[DateTime, Builds]() {
       override def default(key: DateTime) = new Builds()
     };
