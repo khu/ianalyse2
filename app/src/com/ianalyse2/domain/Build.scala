@@ -10,8 +10,7 @@ class Build(val name: String,
             val commitors: List[String]) {
 
   def toJavaScriptDate = {
-    new DateTime(startTime.getYear, startTime.getMonthOfYear, startTime.getDayOfMonth,
-        0, 0, 0, 0, DateTimeZone.UTC).getMillis
+    toDateTime.getMillis
   }
 
   def toJavaScriptTime = {
@@ -24,5 +23,10 @@ class Build(val name: String,
       new Integer(toJavaScriptTime),
       number
     )
+  }
+
+  def toDateTime = {
+    new DateTime(startTime.getYear, startTime.getMonthOfYear, startTime.getDayOfMonth,
+      0, 0, 0, 0, DateTimeZone.UTC)
   }
 }

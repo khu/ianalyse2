@@ -1,6 +1,8 @@
 package com.ianalyse2.domain
 
 import com.ianalyse2.util.LogHelper
+import collection.mutable.HashMap
+import org.joda.time.DateTime
 
 
 class Builds extends LogHelper {
@@ -23,11 +25,21 @@ class Builds extends LogHelper {
   }
 
   def perDay = {
-    new PerDay(orderByDay)
+    //new PerDay
+    //new PerDay(orderByDay)
   }
 
   def orderByDay = {
-    List[Builds]()
+    var ordered = new HashMap[DateTime, Builds]() {
+      override def default(key: DateTime) = new Builds()
+    };
+    for (build <- builds) {
+      //val dateTime: DateTime = build.toDate
+      //var orderedBuilds: Builds = ordered(dateTime)
+//      orderedBuilds = orderedBuilds.:::(List(build))
+//      ordered += (build.toDate -> orderedBuilds)
+    }
+    ordered
   }
 
   def passRate = {
