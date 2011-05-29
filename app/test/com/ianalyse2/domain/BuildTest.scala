@@ -29,7 +29,7 @@ class BuildTest extends Spec with ShouldMatchers {
 
     it("should handle per build detail2") {
       val b1 = new Build("analystic-server", "1", new DateTime(2010, 12, 8, 2, 0, 0, 0, DateTimeZone.UTC), 12, false, List("jack", "ying"))
-      b1.toDateTime.eq(new DateTime(2010, 12, 8, 2, 0, 0, 0, DateTimeZone.UTC))
+      b1.toDateTime should be === new DateTime(2010, 12, 8, 0, 0, 0, 0, DateTimeZone.UTC)
     }
 
   }

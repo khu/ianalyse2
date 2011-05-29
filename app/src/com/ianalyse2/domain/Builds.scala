@@ -34,10 +34,10 @@ class Builds extends LogHelper {
       override def default(key: DateTime) = new Builds()
     };
     for (build <- builds) {
-      //val dateTime: DateTime = build.toDate
-      //var orderedBuilds: Builds = ordered(dateTime)
-//      orderedBuilds = orderedBuilds.:::(List(build))
-//      ordered += (build.toDate -> orderedBuilds)
+      val dateTime: DateTime = build.toDateTime
+      var orderedBuilds: Builds = ordered(dateTime)
+      orderedBuilds = orderedBuilds.:::(List(build))
+      ordered += (dateTime -> orderedBuilds)
     }
     ordered
   }
