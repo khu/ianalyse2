@@ -13,9 +13,6 @@ class ProjectsTest extends Spec with ShouldMatchers {
       projects.projects.put(project1.name, project1)
       projects.projects.put(project2.name, project2)
       System.out.println(projects.names)
-//      for(project <- projects) {
-//        System.out.print(project.name)
-//      }
     }
   }
 }

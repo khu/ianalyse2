@@ -1,16 +1,16 @@
 package com.ianalyse2.domain
 
-class PerDay(val builds: List[Build]) {
+class PerDay(val builds: List[Builds]) {
   def asJson = {
-    var allPassed = List[String]()
-    var allFailed = List[String]()
-    for (val build <- builds) {
-      if (build.passed) {
-        allPassed = allPassed ::: List(build.toPerBuild)
-      } else {
-        allFailed = allFailed ::: List(build.toPerBuild)
-      }
-    }
+//    var allPassed = List[String]()
+//    var allFailed = List[String]()
+//    for (val build <- builds) {
+//      if (build.passed) {
+//        allPassed = allPassed ::: List(build.toPerBuild)
+//      } else {
+//        allFailed = allFailed ::: List(build.toPerBuild)
+//      }
+//    }
 //       {
 //            name: 'Failed',
 //            color: '#B90016',
@@ -30,11 +30,12 @@ class PerDay(val builds: List[Build]) {
 //            data: [[Date.UTC(2010, 3, 16), 12], [Date.UTC(2010, 3,19), 12], [Date.UTC(2010, 3,20), 19]]
 //
 //        }
-    String.format("""
-{
-    "passed"   : %s,
-    "failed" : %s
-}
-""", allPassed.mkString("[", ",", "]"), allFailed.mkString("[", ",", "]"))
+//    String.format("""
+//{
+//    "passed"   : %s,
+//    "failed" : %s
+//}
+//""", allPassed.mkString("[", ",", "]"), allFailed.mkString("[", ",", "]"))
+    ""
   }
 }
