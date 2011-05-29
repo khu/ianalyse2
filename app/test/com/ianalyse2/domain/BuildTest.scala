@@ -27,7 +27,7 @@ class BuildTest extends Spec with ShouldMatchers {
       b1.toPerBuild should be === "[1291766400000,2,1]"
     }
 
-    it("should handle per build detail") {
+    it("should handle per build detail2") {
       val b1 = new Build("analystic-server", "1", new DateTime(2010, 12, 8, 2, 0, 0, 0, DateTimeZone.UTC), 12, false, List("jack", "ying"))
       b1.toDateTime.eq(new DateTime(2010, 12, 8, 2, 0, 0, 0, DateTimeZone.UTC))
     }

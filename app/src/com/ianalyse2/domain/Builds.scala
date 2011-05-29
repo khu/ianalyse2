@@ -25,7 +25,7 @@ class Builds extends LogHelper {
   }
 
   def perDay = {
-    //new PerDay
+    new PerDay
     //new PerDay(orderByDay)
   }
 
