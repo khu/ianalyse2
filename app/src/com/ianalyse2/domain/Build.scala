@@ -29,4 +29,6 @@ class Build(val name: String,
     new DateTime(startTime.getYear, startTime.getMonthOfYear, startTime.getDayOfMonth,
       0, 0, 0, 0, DateTimeZone.UTC)
   }
+
+
 }

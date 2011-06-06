@@ -3,6 +3,8 @@ package com.ianalyse2.domain
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.{BeforeAndAfterEach, Spec}
 import com.ianalyse2.ProjectFixture
+import java.util.HashMap
+import org.joda.time.DateTime
 
 
 class PerDayTest
@@ -21,6 +23,5 @@ class PerDayTest
      "[[1291766400000,0.0],[1291852800000,100.0],[1292803200000,0.0]]"
       );
     }
-
   }
 }

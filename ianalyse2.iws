@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb305af1-9d0e-4f27-abbf-9d17167d4d14" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/lib/ianalyse.jar" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/lib/ianalyse.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/ianalyse2/parser/HudsonBuildParser.scala" afterPath="$PROJECT_DIR$/app/src/com/ianalyse2/parser/HudsonBuildParser.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" afterPath="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ianalyse2.iws" afterPath="$PROJECT_DIR$/ianalyse2.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java" afterPath="$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java" />
     </list>
     <ignored path="ianalyse2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,82 +68,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl">
+      <file leaf-file-name="Build.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="11" selection-start="3880" selection-end="3880" vertical-scroll-proportion="0.0">
+            <state line="32" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectController.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/controller/ProjectController.scala">
+      <file leaf-file-name="HudsonBuildParser.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/parser/HudsonBuildParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+            <state line="34" column="35" selection-start="850" selection-end="850" vertical-scroll-proportion="0.56666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerDay.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala">
+      <file leaf-file-name="HudsonBuildParserTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/parser/HudsonBuildParserTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="1" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+            <state line="58" column="37" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeqLike.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/sdk/scala-2.8.1.final/src/scala-library-src.jar!/scala/collection/SeqLike.scala">
+      <file leaf-file-name="ProjectConfig.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/ProjectConfig.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="803" column="26" selection-start="30624" selection-end="30629" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Projects.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Projects.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommitResults.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/CommitResults.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="17" selection-start="1092" selection-end="1131" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IanalyseServer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="29" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3442623">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="per-day.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-day.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PerDayTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="445" selection-end="501" vertical-scroll-proportion="0.0">
+            <state line="20" column="3" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,15 +121,18 @@
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/ProjectsTest.scala" />
         <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerBuildTest.scala" />
-        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala" />
         <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/BuildTest.scala" />
         <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/BuildsTest.scala" />
-        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" />
         <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerBuild.scala" />
         <option value="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl" />
         <option value="$PROJECT_DIR$/app/webapp/javascripts/per-day.js" />
-        <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
+        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala" />
         <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala" />
+        <option value="$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala" />
+        <option value="$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java" />
+        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala" />
+        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/domain/ProjectConfig.scala" />
+        <option value="$PROJECT_DIR$/app/src/com/ianalyse2/parser/HudsonBuildParser.scala" />
       </list>
     </option>
   </component>
@@ -203,8 +167,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,7 +217,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ianalyse2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,11 +239,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="ianalyse2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,29 +265,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ianalyse2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="recentsLimit" value="5" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="ScalaTest.PerDayTest">
+  <component name="RunManager" selected="Application.IanalyseServer">
+    <configuration default="false" name="BuildsTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="app" />
+      <setting name="path" value="com.ianalyse2.domain.BuildsTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="version" value="false" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="BuildTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="app" />
       <setting name="path" value="com.ianalyse2.domain.BuildTest" />
@@ -333,6 +325,18 @@
     <configuration default="false" name="PerBuildTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="app" />
       <setting name="path" value="com.ianalyse2.domain.PerBuildTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="version" value="false" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PerDayTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="app" />
+      <setting name="path" value="com.ianalyse2.domain.PerDayTest" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
@@ -358,29 +362,19 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="BuildsTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="app" />
-      <setting name="path" value="com.ianalyse2.domain.BuildsTest" />
-      <setting name="package" value="" />
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <module name="" />
+      <setting name="path" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="version" value="false" />
+      <setting name="packagepath" value="" />
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="PerDayTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="app" />
-      <setting name="path" value="com.ianalyse2.domain.PerDayTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="version" value="false" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -488,11 +482,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.BuildTest" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.PerBuildTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.IanalyseServer" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.BuildsTest" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.PerDayTest" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.BuildsTest" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.BuildTest" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.PerBuildTest" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.PerDayTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IanalyseServer" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -503,6 +497,8 @@
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
     <option name="LAST_MERGED_REVISION" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
@@ -513,6 +509,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -524,25 +521,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="22" width="1397" height="878" extended-state="0" />
-    <editor active="false" />
+    <frame x="43" y="22" width="1237" height="778" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41292876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13787879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38390502" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.119436204" sideWeight="0.38654354" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06902357" sideWeight="0.8621212" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6134565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36279684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -550,6 +547,15 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
@@ -561,6 +567,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -584,114 +591,100 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala">
+    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="532" selection-end="532" vertical-scroll-proportion="-1.5768688">
-          <folding />
-        </state>
+        <state line="25" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.66129035" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerBuild.scala">
+    <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/commitors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="50" selection-start="273" selection-end="273" vertical-scroll-proportion="0.23045267">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="477" selection-end="485" vertical-scroll-proportion="0.51028806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/BuildsTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="4" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.4526749">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerBuildTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="498" selection-end="519" vertical-scroll-proportion="0.48971194">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Project.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="37" selection-end="37" vertical-scroll-proportion="0.028806584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="35" selection-start="9" selection-end="35" vertical-scroll-proportion="-0.60493827">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webapp/WEB-INF/ftls/project/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="11" selection-start="3880" selection-end="3880" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8018433" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webapp/javascripts/per-day.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/controller/ProjectController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/CommitResults.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="17" selection-start="1092" selection-end="1131" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="88" column="27" selection-start="2191" selection-end="2191" vertical-scroll-proportion="1.1129032" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Projects.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="6" selection-start="210" selection-end="210" vertical-scroll-proportion="0.21145375" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/sdk/scala-2.8.1.final/src/scala-library-src.jar!/scala/collection/SeqLike.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="803" column="26" selection-start="30624" selection-end="30629" vertical-scroll-proportion="0.0">
+        <state line="803" column="26" selection-start="30624" selection-end="30629" vertical-scroll-proportion="0.3356009" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/sdk/scala-2.8.1.final/src/scala-library-src.jar!/scala/collection/IterableLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="35" selection-start="4254" selection-end="4254" vertical-scroll-proportion="0.31746033" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Builds.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="11" selection-start="531" selection-end="531" vertical-scroll-proportion="0.57369614" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/webapp/WEB-INF/lib/ianalyse.jar!/com/ianalyse2/domain/ProjectsConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="49" selection-end="49" vertical-scroll-proportion="0.033980582">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/domain/PerDayTest.scala">
+    <entry file="jar://$PROJECT_DIR$/app/webapp/WEB-INF/lib/ianalyse.jar!/com/ianalyse2/domain/Build.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="445" selection-end="501" vertical-scroll-proportion="0.0">
+        <state line="1" column="11" selection-start="40" selection-end="40" vertical-scroll-proportion="0.033980582">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/PerDay.scala">
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/ProjectsConfig.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="1" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+        <state line="21" column="33" selection-start="713" selection-end="713" vertical-scroll-proportion="0.3398058">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/service/AnalyseService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="370" selection-end="370" vertical-scroll-proportion="0.39936608">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/com/ianalyse/IanalyseServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3442623">
+        <state line="18" column="16" selection-start="570" selection-end="570" vertical-scroll-proportion="0.048543688">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/Build.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/domain/ProjectConfig.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="3" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/com/ianalyse2/parser/HudsonBuildParserTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="37" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/com/ianalyse2/parser/HudsonBuildParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="35" selection-start="850" selection-end="850" vertical-scroll-proportion="0.56666666">
           <folding />
         </state>
       </provider>

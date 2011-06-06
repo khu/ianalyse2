@@ -26,7 +26,6 @@ class Builds extends LogHelper {
 
   def perDay = {
     new PerDay(orderByDay)
-    //new PerDay(orderByDay)
   }
 
   def orderByDay:HashMap[DateTime, Builds] = {

@@ -9,7 +9,7 @@ class PerDay(val byDays:HashMap[DateTime, Builds]) {
     var passed = List[String]()
     var failed = List[String]()
     var rate = List[String]()
-    val days: Seq[DateTime] = getLatest10Days(byDays)
+    val days: Seq[DateTime] = getLatestNDays(byDays, 10)
 
 
     for(val day <- days) {
@@ -31,9 +31,9 @@ class PerDay(val byDays:HashMap[DateTime, Builds]) {
         rate.mkString("[", ",", "]"))
   }
 
-  def getLatest10Days(byDays:HashMap[DateTime, Builds]) = {
+  def getLatestNDays(byDays:HashMap[DateTime, Builds], number:Int) = {
     var ordered: Seq[DateTime] = byDays.keys.toSeq.sortBy(x => x.getMillis)
-    ordered = ordered.take(10)
+    ordered = ordered.take(number)
     ordered
   }
 

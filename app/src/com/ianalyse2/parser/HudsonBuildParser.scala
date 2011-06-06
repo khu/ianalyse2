@@ -22,14 +22,22 @@ object HudonBuildParser {
     for (buildSegment <- buildSegments) {
       val name: String = (buildSegment \ "name").text
       val url: String = (buildSegment \ "url").text
-      val job = parseJob(url + "/api/xml");
+      val job = parseJob(url);
       builds = builds.:::(job)
     }
     builds
   }
 
+  def apiXmlUrl(url:String) = {
+      url + "/api/xml"
+  }
+
+  def consoleTextUrl(url:String) = {
+      url + "/consoleText"
+  }
+
   def parseJob(url: String) = {
-    val elem: Elem = XML.load(new URL(url))
+    val elem: Elem = XML.load(new URL(apiXmlUrl(url)))
     val commitor = parseCommiter(elem)
     new Build(name((elem \ "url").text),
       (elem \ "number").text,
