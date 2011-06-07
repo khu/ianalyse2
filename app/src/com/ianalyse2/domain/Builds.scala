@@ -41,6 +41,22 @@ class Builds extends LogHelper {
     ordered
   }
 
+  def failedTests:HashMap[String, Int] = {
+    var ordered = new HashMap[String, Int]() {
+      override def default(key: String) = 0
+    };
+    for (build <- builds) {
+      if (!build.passed) {
+        for (test <- build.failedTests) {
+          var failedTimes :Int = ordered(test)
+          failedTimes = failedTimes + 1
+          ordered += (test -> failedTimes)
+        }
+      }
+    }
+    ordered
+  }
+
   def passRate = {
     if (length > 0) {
       val mc = java.math.MathContext.DECIMAL128

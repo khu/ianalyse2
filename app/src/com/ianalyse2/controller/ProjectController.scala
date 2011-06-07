@@ -2,10 +2,11 @@ package com.ianalyse2.controller
 
 import org.springframework.stereotype.Controller
 import com.ianalyse2.util.LogHelper
-import com.ianalyse2.domain.Projects
 import org.springframework.web.bind.annotation.{PathVariable, RequestMethod, RequestMapping}
 import org.springframework.web.servlet.ModelAndView
 import collection.JavaConversions
+import com.ianalyse2.domain.{Project, Projects}
+import collection.mutable.HashMap
 
 @Controller
 @RequestMapping(Array("/project"))
@@ -29,5 +30,16 @@ class ProjectController extends LogHelper {
   @RequestMapping(value = Array("/{project}/perday.json"), method = Array(RequestMethod.GET))
   def perDay(@PathVariable project: String) = {
     new JsonView(Projects.find(project).perDay.asJson);
+  }
+
+  @RequestMapping(value = Array("/{project}/failedCounts.json"), method = Array(RequestMethod.GET))
+  def failedTests(@PathVariable project: String) = {
+    val hashMap: HashMap[String, Int] = Projects.find(project).failedTests
+    var json = "{";
+    for (entry <- hashMap) {
+      json = json + "\"" + entry._1 + "\" : " + entry._2 + ", "
+    }
+    json = json + "}"
+    new JsonView(json);
   }
 }

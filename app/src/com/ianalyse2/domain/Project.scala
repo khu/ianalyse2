@@ -17,6 +17,10 @@ class Project(val config: ProjectConfig) {
     builds.perBuild
   }
 
+  def failedTests = {
+    builds.failedTests
+  }
+
   def perDay = {
     builds.perDay
   }

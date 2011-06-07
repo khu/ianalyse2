@@ -53,7 +53,25 @@ class BuildsTest extends Spec with ShouldMatchers {
       builds.orderByDay.size should be === 2
       builds.orderByDay(new DateTime(2010, 1, 1, 0, 0, 0, 0, DateTimeZone.UTC)).length should be === 2
       builds.orderByDay(new DateTime(2010, 1, 2, 0, 0, 0, 0, DateTimeZone.UTC)).length should be === 1
+    }
 
+    it("should report there is no failed tests.") {
+      val builds = new Builds()
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 7, 1, 1, 1), 0, true, List(), List[String]()))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 1, 7, 1, 1), 0, true, List(), List[String]()))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 2, 1, 1, 1), 0, true, List(), List[String]()))
+      builds.failedTests.size should be === 0
+    }
+
+    it("should report there is mutiple failed tests.") {
+      val builds = new Builds()
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 7, 1, 1, 1), 0, false, List(), List("A#1", "B#1")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 1, 7, 1, 1), 0, false, List(), List("A#1")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 2, 1, 1, 1), 0, false, List(), List("B#2")))
+      builds.failedTests.size should be === 3
+      builds.failedTests("A#1") should be === 2
+      builds.failedTests("B#1") should be === 1
+      builds.failedTests("B#2") should be === 1
     }
 
   }
