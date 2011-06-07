@@ -33,29 +33,32 @@ object HudonBuildParser {
   }
 
   def consoleTextUrl(url:String) = {
-      url + "/consoleText"
+      url + "consoleText"
+  }
+
+  def parseJobByElement(elem: Elem): Build = {
+    val commitor = parseCommiter(elem)
+    val text: String = (elem \ "url").text
+    val buildResult : Boolean = result((elem \ "result").text)
+    var brokenTests = List[String]();
+    if (!buildResult) {
+      brokenTests = FailedCucumberParser.parse(consoleTextUrl(text))
+    }
+    new Build(name(text),
+      (elem \ "number").text,
+      new DateTime((elem \ "timestamp").text.toLong, DateTimeZone.UTC),
+      (elem \ "duration").text.toInt,
+      buildResult, commitor, brokenTests);
   }
 
   def parseJob(url: String) = {
     val elem: Elem = XML.load(new URL(apiXmlUrl(url)))
-    val commitor = parseCommiter(elem)
-    new Build(name((elem \ "url").text),
-      (elem \ "number").text,
-      new DateTime((elem \ "timestamp").text.toLong, DateTimeZone.UTC),
-      (elem \ "duration").text.toInt,
-      result((elem \ "result").text),
-      commitor);
+    parseJobByElement(elem)
   }
 
   def parseJob(stream: InputStream) = {
     val elem: Elem = XML.load(stream)
-    val commitor = parseCommiter(elem)
-    new Build(name((elem \ "url").text),
-      (elem \ "number").text,
-      new DateTime((elem \ "timestamp").text.toLong, DateTimeZone.UTC),
-      (elem \ "duration").text.toInt,
-      result((elem \ "result").text),
-      commitor);
+    parseJobByElement(elem)
   }
 
   def parseCommiter(elem: Elem) = {

@@ -7,7 +7,8 @@ class Build(val name: String,
             val startTime: DateTime,
             val duration: Int,
             val passed: Boolean,
-            val commitors: List[String]) {
+            val commitors: List[String],
+            val failedTests: List[String]) {
 
   def toJavaScriptDate = {
     toDateTime.getMillis

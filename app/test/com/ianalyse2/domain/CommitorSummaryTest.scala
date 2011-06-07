@@ -14,8 +14,8 @@ class CommitorSummaryTest extends Spec with ShouldMatchers with BeforeAndAfterEa
   describe("analyse the jobs") {
     it("should pass the single the commitor") {
       val builds = new Builds()
-      builds.add(new Build("a", "111", new DateTime(), 0, true, List("james")))
-      builds.add(new Build("a", "111", new DateTime(), 0, false, List("james")))
+      builds.add(new Build("a", "111", new DateTime(), 0, true, List("james"), List[String]()))
+      builds.add(new Build("a", "111", new DateTime(), 0, false, List("james"), List("case1")))
       builds.commitResults.asJson should be === String.format("""
 {
     "names"  : %s,
@@ -27,9 +27,9 @@ class CommitorSummaryTest extends Spec with ShouldMatchers with BeforeAndAfterEa
 
     it("should pass the single the jobs") {
       val builds = new Builds()
-      builds.add(new Build("a", "111", new DateTime(), 0, true, List("james")))
-      builds.add(new Build("a", "111", new DateTime(), 0, true, List("jane", "james")))
-      builds.add(new Build("a", "111", new DateTime(), 0, false, List("bob")))
+      builds.add(new Build("a", "111", new DateTime(), 0, true, List("james"), List[String]()))
+      builds.add(new Build("a", "111", new DateTime(), 0, true, List("jane", "james"), List[String]()))
+      builds.add(new Build("a", "111", new DateTime(), 0, false, List("bob"), List("case1")))
       builds.commitResults.asJson should be === String.format("""
 {
     "names"  : %s,
