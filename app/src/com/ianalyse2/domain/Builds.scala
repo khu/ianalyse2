@@ -2,8 +2,8 @@ package com.ianalyse2.domain
 
 import com.ianalyse2.util.LogHelper
 import collection.mutable.HashMap
-import org.joda.time.DateTime
 import collection.Seq
+import org.joda.time.{DateTimeZone, DateTime}
 
 
 class Builds extends LogHelper {
@@ -34,7 +34,7 @@ class Builds extends LogHelper {
       override def default(key: DateTime) = new Builds()
     };
     for (build <- builds) {
-      val dateTime: DateTime = build.toDateTime
+      val dateTime: DateTime = build.toDateTime(DateTimeZone.getDefault)
       var orderedBuilds: Builds = ordered(dateTime)
       orderedBuilds = orderedBuilds.:::(List(build))
       ordered += (dateTime -> orderedBuilds)

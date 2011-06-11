@@ -3,6 +3,7 @@ package com.ianalyse2.parser
 import org.scalatest.Spec
 import org.scalatest.matchers.ShouldMatchers
 import java.io.{ByteArrayInputStream, InputStream}
+import org.joda.time.{DateTime, DateTimeZone}
 
 class HudsonBuildParserTest extends Spec with ShouldMatchers {
 
@@ -84,9 +85,5 @@ class HudsonBuildParserTest extends Spec with ShouldMatchers {
         new ByteArrayInputStream(hudondXml.toString.getBytes));
       build.commitors.length should equal(4)
     }
-
-
-
-
   }
 }

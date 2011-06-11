@@ -10,26 +10,24 @@ class Build(val name: String,
             val commitors: List[String],
             val failedTests: List[String]) {
 
-  def toJavaScriptDate = {
-    toDateTime.getMillis
+  def toJavaScriptDate(timezone: DateTimeZone) = {
+    toDateTime(timezone).getMillis
   }
 
-  def toJavaScriptTime = {
-    startTime.hourOfDay.get
+  def toJavaScriptTime(timezone: DateTimeZone) = {
+    startTime.toDateTime(timezone).hourOfDay.get
   }
 
-  def toPerBuild = {
+  def toPerBuild(timezone: DateTimeZone) = {
     String.format("[%s,%d,%s]",
-      toJavaScriptDate.toString,
-      new Integer(toJavaScriptTime),
+      toJavaScriptDate(timezone).toString,
+      new Integer(toJavaScriptTime(timezone)),
       number
     )
   }
 
-  def toDateTime = {
+  def toDateTime(timezone: DateTimeZone) = {
     new DateTime(startTime.getYear, startTime.getMonthOfYear, startTime.getDayOfMonth,
-      0, 0, 0, 0, DateTimeZone.UTC)
+      0, 0, 0, 0, DateTimeZone.UTC).toDateTime(timezone)
   }
-
-
 }
