@@ -21,7 +21,7 @@ class ProjectsConfigTest extends Spec with ShouldMatchers with BeforeAndAfterEac
       configs = new ProjectsConfig("http://deadlock.netbeans.org/hudson/api/xml")
       configs.start
       configs.init
-      Thread.sleep(20000)
+      Thread.sleep(30000)
       Projects.length should be > 0
     }
 

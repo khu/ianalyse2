@@ -16,6 +16,7 @@
     <script type="text/javascript" src="/ianalyse2/javascripts/commitors.js"></script>
     <script type="text/javascript" src="/ianalyse2/javascripts/per-build.js"></script>
     <script type="text/javascript" src="/ianalyse2/javascripts/per-day.js"></script>
+    <script type="text/javascript" src="/ianalyse2/javascripts/failed-tests.js"></script>
 </head>
 <body>
 	<div class="container" id="header">
@@ -94,6 +95,21 @@
         </script>
 	</div>
 
+	<div class="container">
+		<h2>All the failed tests</h2>
+        <div id="failed-tests">
+        </div>
+        <script type="text/javascript">
+        jQuery(document).ready(function() {
+        $.ajax({
+          url: "/ianalyse2/project/${project.name()}/failedCounts.json",
+          success: function(data, textStatus, jqXHR){
+                $("#failed-tests").html(jqXHR.responseText)
+          }
+        });
+        })
+        </script>
+	</div>
 
 	<br/>
 	<div id="footer" class="container">

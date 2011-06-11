@@ -4,6 +4,7 @@ import org.scalatest.Spec
 import org.scalatest.matchers.ShouldMatchers
 import collection.mutable.HashMap
 import org.joda.time.{DateTimeZone, DateTime}
+import collection.Seq
 
 
 class BuildsTest extends Spec with ShouldMatchers {
@@ -69,9 +70,30 @@ class BuildsTest extends Spec with ShouldMatchers {
       builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 1, 7, 1, 1), 0, false, List(), List("A#1")))
       builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 2, 1, 1, 1), 0, false, List(), List("B#2")))
       builds.failedTests.size should be === 3
-      builds.failedTests("A#1") should be === 2
-      builds.failedTests("B#1") should be === 1
-      builds.failedTests("B#2") should be === 1
+      builds.failedTests(0) should be === ("A#1", 2)
+      builds.failedTests(1) should be === ("B#1", 1)
+      builds.failedTests(2) should be === ("B#2", 1)
+    }
+
+    it("should sort this failed in order") {
+      val builds = new Builds()
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 7, 1, 1, 1), 0, false, List(), List("A#1", "B#1", "A#2")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 1, 7, 1, 1), 0, false, List(), List("A#1", "A#2")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 2, 1, 1, 1), 0, false, List(), List("A#1", "B#2")))
+      builds.failedTests.size should be === 4
+
+      builds.failedTests(0) should be === ("A#1", 3)
+      builds.failedTests(1) should be === ("A#2", 2)
+    }
+
+    it("should only take the first top 10 failed tests") {
+      val builds = new Builds()
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 7, 1, 1, 1), 0, false, List(), List("A#1", "A#2", "A#3", "A#4")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 1, 7, 1, 1), 0, false, List(), List("A#5", "A#6", "A#7", "A#8")))
+      builds.add(new Build("a", "111", new DateTime(2010, 1, 1, 2, 1, 1, 1), 0, false, List(), List("A#9", "A#10", "A#11", "A#12")))
+      builds.failedTests.size should be === 10
+
+      builds.failedTests(9) should be === ("A#9", 1)
     }
 
   }

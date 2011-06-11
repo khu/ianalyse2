@@ -21,7 +21,7 @@ public class IanalyseServer {
         if ("production".equals(System.getProperty("env"))) {
             wac.setResourceBase("./ianalyse2");
         } else {
-            System.setProperty("url", "http://10.113.192.70:9080/api/xml");
+            System.setProperty("url", "http://deadlock.netbeans.org/hudson/api/xml");
             if (new File("./app/webapp/WEB-INF/classes").exists()) {
                 FileUtils.cleanDirectory(new File("./app/webapp/WEB-INF/classes"));
             }

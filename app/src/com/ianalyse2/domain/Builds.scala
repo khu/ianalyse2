@@ -3,6 +3,7 @@ package com.ianalyse2.domain
 import com.ianalyse2.util.LogHelper
 import collection.mutable.HashMap
 import org.joda.time.DateTime
+import collection.Seq
 
 
 class Builds extends LogHelper {
@@ -41,7 +42,7 @@ class Builds extends LogHelper {
     ordered
   }
 
-  def failedTests:HashMap[String, Int] = {
+  def failedTests = {
     var ordered = new HashMap[String, Int]() {
       override def default(key: String) = 0
     };
@@ -54,7 +55,9 @@ class Builds extends LogHelper {
         }
       }
     }
-    ordered
+    val sorted: List[(String, Int)] = ordered.toList.sortWith((t1, t2) => t1._2 > t2._2)
+    val top10: List[(String, Int)] = sorted.take(10)
+    top10
   }
 
   def passRate = {

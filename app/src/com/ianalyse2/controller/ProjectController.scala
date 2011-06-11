@@ -34,12 +34,13 @@ class ProjectController extends LogHelper {
 
   @RequestMapping(value = Array("/{project}/failedCounts.json"), method = Array(RequestMethod.GET))
   def failedTests(@PathVariable project: String) = {
-    val hashMap: HashMap[String, Int] = Projects.find(project).failedTests
-    var json = "{";
-    for (entry <- hashMap) {
-      json = json + "\"" + entry._1 + "\" : " + entry._2 + ", "
+    val seq: Seq[(String, Int)] = Projects.find(project).failedTests
+    var json = "<dl>";
+        
+    for (entry <- seq) {
+      json = json + "<dt>" + entry._1 + "</dt><dd>" + entry._2 + "</dd>"
     }
-    json = json + "}"
+    json = json + "</dl>"
     new JsonView(json);
   }
 }
